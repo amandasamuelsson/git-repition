@@ -4,10 +4,14 @@
 
 
 function sayHello(){
-    console.log(count + '. Hello World!')
+    console.log(count + '. Hello World!');
+    count += 1;
 }
-for (var i = 0; i < 10; i++){
-    console.log(i);
+for (let i = 0; i < 10; i++) {
+    setTimeout( 
+        function() {
+            console.log(i);
+        }
+        , 1000* i);
 }
 
-setTimeout(sayHello, 2000);
